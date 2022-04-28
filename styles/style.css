@@ -28,7 +28,7 @@ Table of content
     font-family: Barlow, DIN;
     color: var(--rich-black-FOGRA-color);
     background-color: var(--cultured-color);
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     text-align: center ;
 }
 
@@ -181,10 +181,12 @@ main h1 {
 
 /* -5- Main specific */
 /* Index.html */
+
 div.photo img {
     max-width: 8rem;
     max-height: 8rem;
 }
+
 /* projet.html */
 
 .projets {
@@ -217,6 +219,7 @@ div.photo img {
     background-color: var(--middle-blu-color);
     border-radius: 1rem;
     border-width: 1rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -281,6 +284,10 @@ div.photo img {
     overflow: auto;
     background-color: transparent;
     padding-left: 1rem;
+  }
+
+  .content p {
+      text-align: justify;
   }
 
   .content h3 {
@@ -351,15 +358,27 @@ main section li {
 }
 
 .cat-bio {
-    margin: 1rem;
-    height: 20rem;
+    margin: 3rem;
+    height: 25rem;
     display: flex;
     justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items:center;
     border-radius: 1rem;
     border-width: 1rem;
     background-color: var(--middle-blu-color);
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--rich-black-FOGRA-color);
+}
+
+#travail {
+    flex-direction: row-reverse;
+}
+
+.cat-bio img {
+    max-width: 30rem;
+    max-height: 90%;
+    border-radius: 1rem;
+    border-width: 1rem;
 }
 
 .cat-bio * {
@@ -368,6 +387,37 @@ main section li {
 
 .cat-bio h3 {
     font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    background-image: radial-gradient(var(--middle-blu-color), var(--ming-color));
+}
+
+.cat-bio-text {
+    margin: 1rem;
+    border-radius: 1rem;
+    border-width: 1rem;
+    background-color: var(--ming-color);
+}
+
+.bio-liste {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-width: 1rem;
+    background-color: var(--middle-blu-color);
+    
+}
+
+.bio-liste li {
+    margin-bottom: 0.5rem;
+}
+
+.bio-liste h4 {
+    font-weight: bold;
+}
+
+.bio-liste p {
+    font-size: small;
 }
 
 /* -4- Footer */
