@@ -22,13 +22,12 @@ Table of content
 
 /* -2- General */
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Barlow, DIN;
     color: var(--rich-black-FOGRA-color);
     background-color: var(--cultured-color);
-    /*outline: 1px solid red;*/
     text-align: center ;
 }
 
@@ -37,7 +36,7 @@ html, body {
     height: 100%;
 }
 
-p, a, h1, h2, h3 {
+p, h1, h2, h3, a {
     background-color: transparent;
 }
 
@@ -182,9 +181,56 @@ main h1 {
 /* -5- Main specific */
 /* Index.html */
 
+
+
 div.photo img {
     max-width: 8rem;
     max-height: 8rem;
+    border-radius: 5rem;
+    border-width: 5rem;
+    margin-top: -5rem;
+}
+
+.promo {
+    border-radius: 1rem;
+    border-width: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--rich-black-FOGRA-color);
+    width: fit-content;
+    padding: 1rem;
+    background-color: var(--ming-color);
+    margin: 10rem auto;
+}
+
+div.photo {
+    background-color: transparent;
+}
+
+#sous-titre-acceuil {
+    background-color: var(--middle-blu-color);
+    border-radius: 1rem;
+    border-width: 1rem;
+    margin-bottom: 1rem;
+}
+
+.content-acceuil {
+    background-color: var(--middle-blu-color);
+    border-radius: 1rem;
+    border-width: 1rem;
+}
+
+.content-acceuil p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.content-acceuil ul li {
+    font-style: italic;
+    font-stretch: semi-expanded;
+}
+
+.content-acceuil ul li, .content-acceuil  {
+    background-color: var(--middle-blu-color);
 }
 
 /* projet.html */
