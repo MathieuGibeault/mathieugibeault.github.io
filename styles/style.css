@@ -1,3 +1,378 @@
+/*
+Table of content
+-1- Variables
+-2- General
+-3- Nav menu
+-4- Main general
+-5- Main specific
+-6- Footer
+*/
+
+/* -1- Variable */
+:root {
+    --rich-black-FOGRA-color: #0A090C;
+    --rich-black-FROGA-color-low: rgba(10, 9, 12, 0.5);
+    --cultured-color: #F0EDEE;
+    --rich-black-color: #07393C;
+    --ming-color: #2C666E;
+    --middle-blu-color: #90DDF0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+/* -2- General */
+
 *{
     margin: 0;
+    padding: 0;
+    font-family: Barlow, DIN;
+    color: var(--rich-black-FOGRA-color);
+    background-color: var(--cultured-color);
+    outline: 1px solid red;
+    text-align: center ;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+p, a, h1, h2, h3 {
+    background-color: transparent;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "nav main"
+    "nav footer";
+    grid-template-rows: auto 1.5em;
+    grid-template-columns: 1fr 7fr;
+    background-size: cover;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* -3- Nav Menu */
+
+nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+nav a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.logo {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.logo img {
+    min-width: fit-content;
+    min-height: auto;
+}
+
+.titre-profession {
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 1rem;
+}
+
+.titre-profession h1:nth-child(2) {
+    color: var(--rich-black-color);
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.menu {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.menu li {
+    text-align: center;
+    padding-top: 1rem;
+    width: auto;
+    height: 2em;
+    border-radius: 1em;
+    border-width: 1rem;
+    font-size: large;
+    font-weight: 600;
+}
+
+.menu-externe {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.menu-externe > * {
+    padding-top: 1rem;
+}
+
+.menu-externe img {
+    max-width: 3em;
+    max-height: 3em;
+}
+
+.menu-externe a {
+    font-weight: bold;
+}
+
+.menu li.curent {
+    background: radial-gradient(var(--middle-blu-color), var(--rich-black-color));
+}
+
+/* -4- Main general */
+
+main {
+    display: grid;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    min-width: 20rem;
+    overflow: auto;
+}
+
+main::-webkit-scrollbar {
+    width: 1rem;
+} 
+
+main::-webkit-scrollbar-track {
+    box-shadow: 0 0 0.5rem var(--rich-black-color);
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: var(--rich-black-color);
+    outline: 1px solid var(--ming-color);
+}
+
+main h1 {
+    background: linear-gradient(to right, var(--middle-blu-color), var(--rich-black-color));
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border-width: 1rem;
+}
+
+.background {
+    display: none;
+}
+
+/* -5- Main specific */
+/* Index.html */
+div.photo img {
+    max-width: 8rem;
+    max-height: 8rem;
+}
+/* projet.html */
+
+.projets {
+    display: flex;
+}
+
+.box {
+    display: grid;
+    width: min-content;
+    height: 20rem;
+    background-color: var(--middle-blu-color);
+    color: var(--cultured-color);
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 1rem;
+    border-width: 1rem;
+    margin: 1rem 1rem 1rem 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--rich-black-FOGRA-color);
+}
+
+.boximage img {
+    max-width: 15rem;
+    max-height: 15rem;
+}
+
+.boximage , .box h3 , .box h4 {
+    background-color: transparent;
+}
+
+.boximage {
+    background-color: var(--middle-blu-color);
+    border-radius: 1rem;
+    border-width: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    transition: all 0.3s ease-out;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--rich-black-FROGA-color-low);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--cultured-color);
+    border-radius: 5px;
+    width: 60%;
+    position: relative;
+    transition: all 3s ease-in-out;
+    max-width: 50rem;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: var(--rich-black-color);
+    font-family: Tahoma, Arial, sans-serif;
+  }
+
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--rich-black-FOGRA-color);
+    background-color: transparent;
+  }
+
+  .popup .close:hover {
+    color: var(--cultured-color);
+  }
+
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+    background-color: transparent;
+    padding-left: 1rem;
+  }
+
+  .content h3 {
+      margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+/* contact.html */
+
+textarea, input {
+    resize: none;
+    text-align: left;
+}
+
+.contact h2, .top-form, form { 
+    display: inline;
+}
+
+.contact {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-width: 1rem;
+    background-color: var(--middle-blu-color);
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--rich-black-FOGRA-color);
+}
+
+.contact > *, label, .top-form {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+#submit-form {
+    background-color: var(--rich-black-color);
+    border: none;
+    color: var(--cultured-color);
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: large;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.4rem var(--rich-black-FOGRA-color);
+}
+
+#submit-form:hover {
+    background-color: var(--ming-color);
+}
+
+#submit-form:active {
+    box-shadow: 0 0.2rem var(--rich-black-FOGRA-color);
+    transform: translateY(0.2rem);
+}
+
+/* biographie.html */
+
+main section li {
+    list-style-type: none;
+}
+
+.cat-bio {
+    margin: 1rem;
+    height: 20rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    border-width: 1rem;
+    background-color: var(--middle-blu-color);
+}
+
+.cat-bio * {
+    background-color: transparent;
+}
+
+.cat-bio h3 {
+    font-size: 1.4rem;
+}
+
+/* -4- Footer */
+
+footer {
+    text-align: right;
+    font-size: x-small;
 }

@@ -4,7 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Mathieu Gibeault</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo" />
+      </div>
+      <div class="titre-profession">
+        <h1>Programmeur <br />front-end</h1>
+        <h1>Étudiant</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="./biographie.html">Biographie</a></li>
+        <li><a href="./projets.html">Projets</a></li>
+        <li class="curent"><a href="./contact.html">Contact</a></li>
+      </ul>
+      <ul class="menu-externe">
+        <li>
+          <img src="../img/facebook.png" alt="Facebook" />
+          <a href="https://www.facebook.com/mahe.gibwalden">Profile Facebook</a>
+        </li>
+        <li>
+          <img src="../img/LI-In-Bug.png" alt="LinkedIn" />
+          <a
+            href="https://www.linkedin.com/?trk=organization_guest_nav-header-logo"
+            >Profile LinkedIn</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <div class="background">
+          <img src="" alt="background" />
+        </div>
+        <div id="titre-acceuil">
+          <h1>Contact</h1>
+        </div>
+        <div class="contact">
+          <form>
+            <h2>Formulaire de contact</h2>
+            <br />
+            <div class="top-form">
+              <label for="name" class="label">Nom : </label>
+              <input type="text" id="nom" name="name" />
+              <label for="email" class="label">Email : </label>
+              <input type="email" name="email" id="email" /><br />
+            </div>
+            <label for="message" class="label">Message : </label><br />
+            <textarea rows="10" cols="80" name="message" id="message"></textarea
+            ><br />
+            <input type="submit" id="submit-form" value="Envoyé" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>© Mathieu Gibeault</footer>
+  </body>
 </html>

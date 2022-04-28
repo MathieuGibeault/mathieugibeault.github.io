@@ -4,7 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Mathieu Gibeault</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo" />
+      </div>
+      <div class="titre-profession">
+        <h1>Programmeur <br />front-end</h1>
+        <h1>Étudiant</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="./biographie.html">Biographie</a></li>
+        <li class="curent"><a href="./projets.html">Projets</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+      <ul class="menu-externe">
+        <li>
+          <img src="../img/facebook.png" alt="Facebook" />
+          <a href="https://www.facebook.com/mahe.gibwalden">Profile Facebook</a>
+        </li>
+        <li>
+          <img src="../img/LI-In-Bug.png" alt="LinkedIn" />
+          <a
+            href="https://www.linkedin.com/?trk=organization_guest_nav-header-logo"
+            >Profile LinkedIn</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <div class="background">
+          <img src="" alt="background" />
+        </div>
+        <div id="titre-acceuil">
+          <h1>Projets</h1>
+        </div>
+
+        <!--Projet 1-->
+        <div class="projets">
+          <a class="button" href="#projet1pop">
+            <div class="box" id="projet1">
+              <div class="boximage">
+                <img src="../img/tp1.png" alt="projet1" />
+              </div>
+              <h3>Projet d'encodage et décodage</h3>
+              <h4>Projet de classe, programmation structurée</h4>
+            </div>
+          </a>
+          <div class="overlay" id="projet1pop">
+            <div class="popup">
+              <div class="boximage">
+                <img src="../img/tp1.png" alt="projet1" />
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                  <h3>Projet d'encodage et décodage</h3>
+                  <p>
+                    Ce projet est réalisé dans le cadre d'un cours pour faire un
+                    algorythme d'encodage et de décodage. Mon projet consiste à
+                    encodé avec une clé de 5 à 9 caractères un fichier par
+                    l'entremise de matrice et de le décodé de la même manière.
+                    La clé est transformé en matrice carré et le texte en
+                    matrice rectangle de même hauteur que la matrice de la clé.
+                    La multiplication des deux matrices produit une matrice
+                    rectangle de même dimention que le texte d'origine. Pour
+                    décodé, la clé en matrice remis en matrice carré et
+                    transformé en matrice inverse est multiplier par la matrice
+                    du message encodé.<br /><a href="www."
+                      >lien vers le projet</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Projet 2-->
+          <a class="button" href="#projet2pop">
+            <div class="box" id="projet2">
+              <div class="boximage">
+                <img src="../img/tp1.png" alt="projet2" />
+              </div>
+              <h3>Projet 2</h3>
+              <h4>Projet de classe</h4>
+            </div>
+          </a>
+          <div class="overlay" id="projet2pop">
+            <div class="popup">
+              <div class="boximage">
+                <img src="../img/tp1.png" alt="projet2" />
+                <a class="close" href="#">&times;</a>
+                <p>bla bla bla2<br /><a href="www.">lien vers le projet</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>© Mathieu Gibeault</footer>
+  </body>
 </html>
