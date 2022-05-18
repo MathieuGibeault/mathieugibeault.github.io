@@ -9,16 +9,21 @@ Table of content
 */
 
 /* -1- Variable */
-:root {
-    --rich-black-FOGRA-color: #0A090C;
-    --rich-black-FROGA-color-low: rgba(10, 9, 12, 0.5);
-    --cultured-color: #F0EDEE;
-    --rich-black-color: #07393C;
-    --ming-color: #2C666E;
-    --middle-blu-color: #90DDF0;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Bebas+Neue&family=Encode+Sans+SC:wght@700&display=swap');
+
+:root {
+    /*color*/
+    --black: #0A090C;
+    --black-with-shading: rgba(10, 9, 12, 0.5);
+    --white: #F0EDEE;
+    --green-black: #07393C;
+    --ming-color: #2C666E;
+    --light-blue: #90DDF0;
+    /*fonts*/
+    --plus-font: 'Encode Sans SC', sans-serif;
+}
 
 /* -2- General */
 
@@ -26,8 +31,8 @@ Table of content
     margin: 0;
     padding: 0;
     font-family: Barlow, DIN;
-    color: var(--rich-black-FOGRA-color);
-    background-color: var(--cultured-color);
+    color: var(--black);
+    background-color: var(--white);
     text-align: center ;
 }
 
@@ -45,7 +50,7 @@ body {
     grid-template-areas: 
     "nav main"
     "nav footer";
-    grid-template-rows: auto 1.5em;
+    grid-template-rows: auto 3em;
     grid-template-columns: 1fr 7fr;
     background-size: cover;
 }
@@ -68,6 +73,10 @@ nav {
     display: grid;
     grid-template-rows: 1fr 1fr 2fr 1fr;
     grid-template-columns: 1fr;
+}
+
+nav h1 {
+    font-family: var(--plus-font);
 }
 
 nav a {
@@ -100,7 +109,7 @@ nav ul {
 }
 
 .titre-profession h1:nth-child(2) {
-    color: var(--rich-black-color);
+    color: var(--green-black);
     text-align: right;
     margin-right: 1rem;
 }
@@ -121,26 +130,8 @@ nav ul {
     font-weight: 600;
 }
 
-.menu-externe {
-    grid-column: 1;
-    grid-row: 4;
-}
-
-.menu-externe > * {
-    padding-top: 1rem;
-}
-
-.menu-externe img {
-    max-width: 3em;
-    max-height: 3em;
-}
-
-.menu-externe a {
-    font-weight: bold;
-}
-
 .menu li.curent {
-    background: radial-gradient(var(--middle-blu-color), var(--rich-black-color));
+    background: radial-gradient(var(--light-blue), var(--green-black));
 }
 
 /* -4- Main general */
@@ -158,16 +149,16 @@ main::-webkit-scrollbar {
 } 
 
 main::-webkit-scrollbar-track {
-    box-shadow: 0 0 0.5rem var(--rich-black-color);
+    box-shadow: 0 0 0.5rem var(--green-black);
 }
 
 main::-webkit-scrollbar-thumb {
-    background-color: var(--rich-black-color);
+    background-color: var(--green-black);
     outline: 1px solid var(--ming-color);
 }
 
 main h1 {
-    background: linear-gradient(to right, var(--middle-blu-color), var(--rich-black-color));
+    background: linear-gradient(to right, var(--light-blue), var(--green-black));
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
@@ -193,11 +184,15 @@ div.photo img {
 .promo {
     border-radius: 1rem;
     border-width: 1rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem var(--rich-black-FOGRA-color);
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--black);
     width: fit-content;
     padding: 1rem;
     background-color: var(--ming-color);
     margin: 10rem auto;
+}
+
+#sous-titre-acceuil h2 {
+    font-family: var(--plus-font);
 }
 
 div.photo {
@@ -205,16 +200,23 @@ div.photo {
 }
 
 #sous-titre-acceuil {
-    background-color: var(--middle-blu-color);
+    background-color: var(--light-blue);
     border-radius: 1rem;
     border-width: 1rem;
     margin-bottom: 1rem;
 }
 
 .content-acceuil {
-    background-color: var(--middle-blu-color);
+    background-color: var(--light-blue);
     border-radius: 1rem;
     border-width: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.content-acceuil>* {
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 .content-acceuil p {
@@ -226,10 +228,33 @@ div.photo {
 .content-acceuil ul li {
     font-style: italic;
     font-stretch: semi-expanded;
+    background-color: var(--light-blue);
 }
 
-.content-acceuil ul li, .content-acceuil  {
-    background-color: var(--middle-blu-color);
+.content-acceuil ul {
+    background-color: transparent;
+}
+
+.content-acceuil form {
+    background-color: transparent;
+}
+
+#bouton-contact { /*corriger le hover du bouton ici*/
+    font-size: 1rem;
+    text-align: center;
+    width: 6rem;
+    height: 3rem;
+    border-width:1px;
+    color: var(--white);
+    border-color: var(--green-black);
+    font-weight: 300;
+    border-radius: 1rem;
+    box-shadow: 3px 4px 0px 0px var(--ming-color);
+    background:linear-gradient(var(--ming-color), var(--green-black));
+}
+
+#buton-contact:hover {
+    background: linear-gradient(var(--ming-color), var(--green-black));
 }
 
 /* projet.html */
@@ -242,13 +267,13 @@ div.photo {
     display: grid;
     width: min-content;
     height: 20rem;
-    background-color: var(--middle-blu-color);
-    color: var(--cultured-color);
+    background-color: var(--light-blue);
+    color: var(--white);
     padding: 1rem 1rem 1rem 1rem;
     border-radius: 1rem;
     border-width: 1rem;
     margin: 1rem 1rem 1rem 1rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem var(--rich-black-FOGRA-color);
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--black);
 }
 
 .boximage img {
@@ -261,7 +286,7 @@ div.photo {
 }
 
 .boximage {
-    background-color: var(--middle-blu-color);
+    background-color: var(--light-blue);
     border-radius: 1rem;
     border-width: 1rem;
     padding: 1rem;
@@ -280,7 +305,7 @@ div.photo {
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--rich-black-FROGA-color-low);
+    background: var(--black-with-shading);
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
@@ -294,7 +319,7 @@ div.photo {
   .popup {
     margin: 70px auto;
     padding: 20px;
-    background: var(--cultured-color);
+    background: var(--white);
     border-radius: 5px;
     width: 60%;
     position: relative;
@@ -304,7 +329,7 @@ div.photo {
   
   .popup h2 {
     margin-top: 0;
-    color: var(--rich-black-color);
+    color: var(--green-black);
     font-family: Tahoma, Arial, sans-serif;
   }
 
@@ -316,12 +341,12 @@ div.photo {
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: var(--rich-black-FOGRA-color);
+    color: var(--black);
     background-color: transparent;
   }
 
   .popup .close:hover {
-    color: var(--cultured-color);
+    color: var(--white);
   }
 
   .popup .content {
@@ -364,8 +389,8 @@ textarea, input {
     padding: 1rem;
     border-radius: 1rem;
     border-width: 1rem;
-    background-color: var(--middle-blu-color);
-    box-shadow: 0.5rem 0.5rem 0.5rem var(--rich-black-FOGRA-color);
+    background-color: var(--light-blue);
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--black);
 }
 
 .contact > *, label, .top-form {
@@ -374,9 +399,9 @@ textarea, input {
 }
 
 #submit-form {
-    background-color: var(--rich-black-color);
+    background-color: var(--green-black);
     border: none;
-    color: var(--cultured-color);
+    color: var(--white);
     padding: 1rem;
     text-align: center;
     text-decoration: none;
@@ -384,7 +409,7 @@ textarea, input {
     font-size: large;
     margin-top: 1rem;
     border-radius: 0.3rem;
-    box-shadow: 0 0.4rem var(--rich-black-FOGRA-color);
+    box-shadow: 0 0.4rem var(--black);
 }
 
 #submit-form:hover {
@@ -392,7 +417,7 @@ textarea, input {
 }
 
 #submit-form:active {
-    box-shadow: 0 0.2rem var(--rich-black-FOGRA-color);
+    box-shadow: 0 0.2rem var(--black);
     transform: translateY(0.2rem);
 }
 
@@ -411,8 +436,8 @@ main section li {
     align-items:center;
     border-radius: 1rem;
     border-width: 1rem;
-    background-color: var(--middle-blu-color);
-    box-shadow: 0.5rem 0.5rem 0.5rem var(--rich-black-FOGRA-color);
+    background-color: var(--light-blue);
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--black);
 }
 
 #travail {
@@ -424,6 +449,7 @@ main section li {
     max-height: 90%;
     border-radius: 1rem;
     border-width: 1rem;
+    margin: 1rem;
 }
 
 .cat-bio * {
@@ -434,7 +460,7 @@ main section li {
     font-size: 1.4rem;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    background-image: radial-gradient(var(--middle-blu-color), var(--ming-color));
+    background-image: radial-gradient(var(--light-blue), var(--ming-color));
 }
 
 .cat-bio-text {
@@ -449,7 +475,7 @@ main section li {
     padding: 1rem;
     border-radius: 1rem;
     border-width: 1rem;
-    background-color: var(--middle-blu-color);
+    background-color: var(--light-blue);
     
 }
 
@@ -468,6 +494,35 @@ main section li {
 /* -4- Footer */
 
 footer {
-    text-align: right;
+    display: flex;
+    flex-direction: row;
     font-size: x-small;
+    justify-content: space-between;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--black);
 }
+
+footer p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-externe {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-externe > * {
+    align-self: center;
+    padding-right: 3rem;
+}
+
+.menu-externe img {
+    max-width: 3em;
+    max-height: 3em;
+}
+
+.menu-externe li {
+    list-style-type: none;
+}
+
