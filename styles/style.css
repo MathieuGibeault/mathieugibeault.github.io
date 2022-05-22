@@ -233,13 +233,22 @@ div.photo {
 
 .content-acceuil ul {
     background-color: transparent;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.content-acceuil .impact {
+    font-family: var(--plus-font);
+    font-size: x-large;
+    font-style: normal;
+    margin-bottom: 1rem;
 }
 
 .content-acceuil form {
     background-color: transparent;
 }
 
-#bouton-contact { /*corriger le hover du bouton ici*/
+#bouton-contact { 
     font-size: 1rem;
     text-align: center;
     width: 6rem;
@@ -251,10 +260,16 @@ div.photo {
     border-radius: 1rem;
     box-shadow: 3px 4px 0px 0px var(--ming-color);
     background:linear-gradient(var(--ming-color), var(--green-black));
+    margin-bottom: 1rem;
 }
 
-#buton-contact:hover {
-    background: linear-gradient(var(--ming-color), var(--green-black));
+#bouton-contact:hover {
+    background: var(--ming-color);
+}
+
+#bouton-contact:active {
+    box-shadow: 1px 1px 0px 0px var(--ming-color);
+    transform: translateY(3px);
 }
 
 /* projet.html */
