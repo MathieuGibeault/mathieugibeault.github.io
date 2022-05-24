@@ -276,6 +276,7 @@ div.photo {
 
 .projets {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .box {
